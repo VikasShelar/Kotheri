@@ -1,0 +1,41 @@
+<body id="LoginForm">
+<div class="container">
+  <h1 class="form-heading">Login Form</h1>
+  <div class="login-form">
+  <div class="main-div">
+      <div class="panel">
+     <h2>Login</h2>
+     <p>Please enter your email and password</p>
+     </div>
+     
+  
+     <form #approForm="ngForm" novalidate autocomplete="off">
+  
+  
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+            Username:<input matInput type="text" name="UserId" [(ngModel)]="user" #log="ngModel" only-alphabets required>
+            <app-error-page  [displayError]="log.invalid && log.errors.required && (log.dirty || log.touched || approForm.submitted)" errorMsg="Please Enter Your User Name" style="color:maroon"></app-error-page>
+          </mat-form-field>
+          
+          </div>    
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+            Password:<input matInput  type="text" name="PassWord" [(ngModel)]="Password" #pass="ngModel" only-numbers required maxlength="10">
+            <app-error-page [displayError]="pass.invalid && pass.errors.required && (pass.dirty || pass.touched || approForm.submitted)" errorMsg="Please Enter your PassWord" ></app-error-page>
+          </mat-form-field>
+          
+          </div>
+          <div class="forgot">
+          <a href="reset.html">Forgot password?</a>
+  </div>
+          <button type="button" class="btn btn-primary" (click)="goToLogin()" >Login</button>
+         
+      </form>
+      </div>
+      
+  <p class="botto-text"> Designed by Vikas Shelar</p>
+  
+  </div></div> 
+  
+</body>

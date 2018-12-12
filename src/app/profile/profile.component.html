@@ -1,0 +1,20 @@
+
+  <div>
+<input type="text" name="search" [(ngModel)]="searchVal">
+    <table cellpadding="2" cellspacing="2" border="1" class=”table-active”>
+                  <tr>
+<th>Id1</th>
+<th>Name</th>
+<th>UserName</th>
+<th>Email</th>
+</tr>
+
+<tr *ngFor ="let val of showArr | LockFilter:searchVal">
+<td>{{val.id}}</td>
+<td>{{val.name}}</td>
+<td>{{val.username}}</td>
+<td>{{val.email}}</td>
+
+</tr>
+    </table>
+  </div>
