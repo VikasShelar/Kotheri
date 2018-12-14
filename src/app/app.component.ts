@@ -8,6 +8,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 export class AppComponent {
 user;
 Password;
+test;
   title = 'VikasApp';
   constructor(private router:Router){
      }
